@@ -722,7 +722,17 @@ var LocationIndex = _location.LocationIndex;
         }
     });
     addLinter('E013', function lintRowChildrenAreCols($, reporter) {
-        var ALLOWED_CHILDREN = COL_CLASSES.concat(['script', '.clearfix', '.bs-customizer-input', '.col-main', '.col-sidebar']);
+        var ALLOWED_CHILDREN = COL_CLASSES.concat([
+            'script',
+            '.clearfix',
+            '.bs-customizer-input',
+            '.col-main',
+            '.col-sidebar',
+            '.col-xs-15',
+            '.col-sm-15',
+            '.col-md-15',
+            '.col-lg-15'
+        ]);
         var selector = '.row>*' + ALLOWED_CHILDREN.map(function (colClass) {
             return ':not(' + colClass + ')';
         }).join('');
